@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2C4D4091-BDF7-09C0-2AF8-CD0D92CADC33" name="Grupe">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<generatorID>EA3AC07C-471A-1A2C-B296-6A52C656FE57</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_grupa" id="0998B81A-B4DC-8548-888A-955AC96FD821">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<generatorID>1E8516ED-7186-5DB6-90DF-865B37BD4790</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<constraintName>Grupe_id_grupa_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(id_grupa,&apos;(1[1-4]{1}[0-9]{2}[A-B])|([A-Z]{2,4}-[I]{1,2}-[0-9][A-B])&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="specializare" id="422941FA-85B7-37B1-E107-B8AFDC4C0938">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<generatorID>4128B0A8-7C22-0732-3736-C566CE1C66EC</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<constraintName>Grupe_specializare_ck</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<listOfValues>
+<valueDef value="CTI" description=""/>
+<valueDef value="IS" description=""/>
+<valueDef value="M-AIA" description=""/>
+<valueDef value="M-C" description=""/>
+</listOfValues>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="facultate" id="CA995BA7-2BB7-3B46-A2C5-AA01B3815BFD">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Pentru simplitate, se ia in considerare doar o singura facultate
+In cazul nostru, doar Facultatea de Automatica si Calculatoare(si formele ei prescurtate) sunt atribute valide]]></commentInRDBMS>
+<generatorID>1C81BD2F-DB96-ED16-BC9E-779218FC4650</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<constraintName>Grupe_facultate_ck</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<listOfValues>
+<valueDef value="AC" description=""/>
+<valueDef value="Facultatea de Automatica si Calculatoare" description=""/>
+<valueDef value="TUIASI-AC" description=""/>
+</listOfValues>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2ED93EC1-A8C5-4AFD-14CE-6AD6F206D264" name="Grupe_PK">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<generatorID>CE9869C1-AFA8-44AF-D6C2-60D90E615C49</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0998B81A-B4DC-8548-888A-955AC96FD821"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

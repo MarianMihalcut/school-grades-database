@@ -1,0 +1,44 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Discipline_Profesori" directorySegmentName="seg_0" id="B9F27330-F5C1-D269-8FAF-5ED928C8FD2A">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-30 11:41:31 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>05BA04DE-D80B-F031-5535-9A5F214553DC</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>ADE815D6-0CA6-23EE-89E1-BBEB9E65F2BB</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<attribute name="tip_profesor" id="53F3C5C5-1DD4-DAF7-A5F4-33E041005BAE">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-30 11:43:29 UTC</createdTime>
+<comment><![CDATA[Atribute posibile: Titular Disciplina si Titular Aplicatii
+Implicit se adauga Titular Aplicatii
+]]></comment>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<constraintName>Discipline_Prof_tip_prof_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<listOfValues>
+<valueDef value="Titular Aplicatii" description=""/>
+<valueDef value="Titular Disciplina" description=""/>
+<valueDef value="titular aplicatii" description=""/>
+<valueDef value="titular disciplina" description=""/>
+</listOfValues>
+<defaultValue>Titular Aplicatii</defaultValue>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+</attribute>
+</attributes>
+</Relation>

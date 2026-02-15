@@ -1,0 +1,166 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="411D648E-DC16-5B88-9409-226F65D7E722" name="Studenti">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<generatorID>9238D2EF-9E54-68D5-6004-CFFAD1853A02</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_student" id="A95E220C-9B52-DF99-B8E4-78D13155355A">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<generatorID>E0C2E3AE-8151-B4CA-9F2C-5D959264F2D0</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>Studenti_id_student_SEQ</autoIncrementSequenceName>
+<autoIncrementTriggerName>Studenti_id_student_TRG</autoIncrementTriggerName>
+</Column>
+<Column name="nume_student" id="1EF37EA8-2E5C-AB5D-D04F-46C2ABCBB254">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<generatorID>C882305B-93EE-C5E5-B2A0-EAC19B2C916D</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<constraintName>Studenti_nume_student_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(nume_student, &apos;^[A-Za-z-]+$&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="prenume_student" id="BBF1005D-0D3E-5078-0D46-67BE3A57A6FB">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<generatorID>0DDD5EE7-C58A-61A9-0659-594ACC2498D1</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<constraintName>Studenti_prenume_student_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(prenume_student, &apos;^[a-zA-Z-]+$&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CNP" id="E345687B-7982-D3F8-C608-EA71CE627DAD">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<generatorID>6C0FE961-91D4-EEA8-374D-3EA83D7283BD</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<constraintName>Studenti_CNP_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>13</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(CNP,&apos;^[0-9]+$&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>13,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_nasterii" id="2C9F16C3-F061-091E-02F1-E963B69D0ED4">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<generatorID>8C91D546-2990-E774-E903-9C30D9B5F641</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="CEA77DA2-1262-24F5-AA6C-2B264953BAC8">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<generatorID>BF902D59-C1A4-F7BF-D071-31CADA809117</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<constraintName>Studenti_email_ck</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(email,&apos;[a-z0-9._%-]+@[a-z0-9._%-]+\.[a-z]{2,4}&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="telefon" id="550E2E4C-427A-A948-5F8A-461465D91B89">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<generatorID>37513058-BD1F-6A47-F597-9B85F80D2E99</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<constraintName>Studenti_telefon_ck</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(telefon, &apos;^[0-9]+$&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="63557213-D022-7464-6153-AB92024355CF" name="Studenti_PK">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<generatorID>ACE1BE77-C6DF-F429-F4C0-0D3D2FFDEE62</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A95E220C-9B52-DF99-B8E4-78D13155355A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5D1C2698-13B2-2628-ACF3-1206BE7A600A" name="CNP">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<generatorID>10343707-146A-EFE4-3F11-CBE42FC34126</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E345687B-7982-D3F8-C608-EA71CE627DAD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="583CBA26-C165-EDFC-382E-5C22CF0B6C20" name="email_s">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<generatorID>B6E0CC62-2741-C48A-B2E8-21861AEA6D3B</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CEA77DA2-1262-24F5-AA6C-2B264953BAC8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D821802C-A045-A84B-39E1-E43EE6C96D86" name="telefon">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<generatorID>9B23529B-F6ED-62A5-EF76-3FE98DF7E35D</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="550E2E4C-427A-A948-5F8A-461465D91B89"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

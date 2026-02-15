@@ -1,0 +1,120 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2A905109-B785-307C-6A02-1F91FFD70331" name="Detalii_student">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-25 06:54:08 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_student" id="9E3482C2-8B33-0755-A5E5-4268A6B9F244">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-30 18:42:22 UTC</createdTime>
+<generatorID>B3F6ADAC-9388-BC81-92A7-7DF44DCEA4B0</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<referedAttribute>E0C2E3AE-8151-B4CA-9F2C-5D959264F2D0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr_matricol" id="6C700028-AB14-115F-8CA4-3527CED322FE">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-25 06:54:08 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<constraintName>Detalii_student_nr_matricol_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="floor(nr_matricol/100)&gt;0"/>
+</checkConstraint>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="serie_legitimatie" id="5387F921-4A7E-426F-0DCB-FFC3CAA09C6C">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-25 06:54:08 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<constraintName>Detalii_student_serie_leg_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(serie_legitimatie, &apos;[A-Z]&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="numar_legitimatie" id="E3194423-4D9F-193C-07DD-5B9D02402738">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-25 06:54:08 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<constraintName>Detalii_student_numar_leg_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="floor(numar_legitimatie/100000)&gt;0"/>
+</checkConstraint>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="608419CE-906B-EDCC-F2BB-1C7CA9829EAA" name="nr_matricol">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-25 06:54:08 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<usedAttributes>
+<attributeRef>6C700028-AB14-115F-8CA4-3527CED322FE</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="2DFEF69E-F563-EFBA-71F5-960B50567BB9" name="numar_legitimatie">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-25 06:54:08 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<usedAttributes>
+<attributeRef>E3194423-4D9F-193C-07DD-5B9D02402738</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="067C64F2-633B-1CFC-206A-7282196A612C" name="Detalii_student_PK">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-30 11:34:35 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9E3482C2-8B33-0755-A5E5-4268A6B9F244</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

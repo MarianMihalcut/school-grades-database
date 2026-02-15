@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Studenti_Detalii_fk" directorySegmentName="seg_0" id="B3F6ADAC-9388-BC81-92A7-7DF44DCEA4B0">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-30 13:34:26 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<sourcePk>ACE1BE77-C6DF-F429-F4C0-0D3D2FFDEE62</sourcePk>
+<identifying>true</identifying>
+<nameOnSource>are asociat un</nameOnSource>
+<nameOnTarget>are asociat un</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>9238D2EF-9E54-68D5-6004-CFFAD1853A02</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>2A905109-B785-307C-6A02-1F91FFD70331</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

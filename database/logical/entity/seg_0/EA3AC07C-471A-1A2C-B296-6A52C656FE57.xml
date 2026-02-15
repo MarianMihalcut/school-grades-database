@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="EA3AC07C-471A-1A2C-B296-6A52C656FE57" name="Grupe">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-16 12:20:23 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_grupa" id="1E8516ED-7186-5DB6-90DF-865B37BD4790">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-16 12:21:18 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<constraintName>Grupe_id_grupa_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(id_grupa,&apos;(1[1-4]{1}[0-9]{2}[A-B])|([A-Z]{2,4}-[I]{1,2}-[0-9][A-B])&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="specializare" id="4128B0A8-7C22-0732-3736-C566CE1C66EC">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-31 09:57:22 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<constraintName>Grupe_specializare_ck</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<listOfValues>
+<valueDef value="CTI" description=""/>
+<valueDef value="IS" description=""/>
+<valueDef value="M-AIA" description=""/>
+<valueDef value="M-C" description=""/>
+</listOfValues>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="facultate" id="1C81BD2F-DB96-ED16-BC9E-779218FC4650">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-16 12:30:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Pentru simplitate, se ia in considerare doar o singura facultate
+In cazul nostru, doar Facultatea de Automatica si Calculatoare(si formele ei prescurtate) sunt atribute valide]]></commentInRDBMS>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<constraintName>Grupe_facultate_ck</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<listOfValues>
+<valueDef value="AC" description=""/>
+<valueDef value="Facultatea de Automatica si Calculatoare" description=""/>
+<valueDef value="TUIASI-AC" description=""/>
+</listOfValues>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C7A7B213-90DB-7DEC-A978-B02B4C024DC1" name="id_grupa">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-20 11:13:05 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="false"/>
+</engineerTo>
+<newElementsIDs>1E8516ED-7186-5DB6-90DF-865B37BD4790</newElementsIDs>
+<usedAttributes>
+<attributeRef>1E8516ED-7186-5DB6-90DF-865B37BD4790</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="107848BA-4646-E418-1713-389B3A22AB49" name="Grupe_PK">
+<createdBy>Marian</createdBy>
+<createdTime>2025-12-02 06:43:58 UTC</createdTime>
+<generatorID>2ED93EC1-A8C5-4AFD-14CE-6AD6F206D264</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1E8516ED-7186-5DB6-90DF-865B37BD4790</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

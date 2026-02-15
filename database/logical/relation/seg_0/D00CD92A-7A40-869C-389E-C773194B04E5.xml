@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Note" directorySegmentName="seg_0" id="D00CD92A-7A40-869C-389E-C773194B04E5">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-24 14:16:28 UTC</createdTime>
+<comment><![CDATA[Fiind relatie M la N, avem tabela de join intre Studenti si Discipline(care are o referinta catre profesori prin Foreign Key), care colecteaza notele obtinute de studenti la discipline]]></comment>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>9238D2EF-9E54-68D5-6004-CFFAD1853A02</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>05BA04DE-D80B-F031-5535-9A5F214553DC</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<attribute name="nota" id="81888347-B90E-04BB-2763-BA9FD4D6D3A7">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-24 14:17:10 UTC</createdTime>
+<comment><![CDATA[De la 1 la 10]]></comment>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<constraintName>Note_nota_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>1</beginValue>
+<endValue>10</endValue>
+<description>Notele sunt de la 1 la 10</description>
+</rangeDef>
+</listOfRanges>
+</attribute>
+<attribute name="tip_nota" id="68908B7B-8EDE-BB7A-D109-6178B6D45AF1">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-30 18:25:15 UTC</createdTime>
+<comment><![CDATA[Examen, laborator sau colocviu]]></comment>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<constraintName>Note_tip_nota_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<listOfValues>
+<valueDef value="Colocviu" description=""/>
+<valueDef value="Examen" description=""/>
+<valueDef value="Laborator" description=""/>
+</listOfValues>
+<defaultValue>Laborator</defaultValue>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+</attribute>
+<attribute name="comentarii" id="1D070393-F0F3-E0C6-B6A8-C2AE429B3B4B">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-24 14:18:04 UTC</createdTime>
+<comment><![CDATA[Optional; doar daca se doreste scrierea de mentiuni se va adauga ceva diferit de NULL]]></comment>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</attribute>
+</attributes>
+</Relation>

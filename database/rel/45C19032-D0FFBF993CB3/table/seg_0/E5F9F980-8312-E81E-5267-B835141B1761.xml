@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E5F9F980-8312-E81E-5267-B835141B1761" name="Discipline">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<generatorID>05BA04DE-D80B-F031-5535-9A5F214553DC</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_disciplina" id="99B7A7EE-0739-60D8-0579-77835D674025">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<generatorID>B74A8B92-4253-E62E-0621-272103409F72</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementStartWith>100</autoIncrementStartWith>
+<autoIncrementMinValue>100</autoIncrementMinValue>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>Discipline_id_disciplina_SEQ</autoIncrementSequenceName>
+<autoIncrementTriggerName>Discipline_id_disciplina_TRG</autoIncrementTriggerName>
+</Column>
+<Column name="denumire" id="6A5070F4-0333-8F25-AE19-74B2AA1CE627">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<comment><![CDATA[Nume intreg(fara prescurtaturi)]]></comment>
+<commentInRDBMS><![CDATA[Se scriu disciplinele in forma prescurtata. Sunt permise doar litere mari]]></commentInRDBMS>
+<generatorID>7F4F2855-B63E-D813-BE4A-93C1A61E6694</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<constraintName>Discipline_denumire_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(denumire, &apos;^[A-Z]+$&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="semestru" id="889A443A-B6CD-23B8-E992-344486A082DE">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<comment><![CDATA[1 sau 2]]></comment>
+<generatorID>275F8714-B417-F960-3362-075F59FA2C21</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<constraintName>Discipline_semestru_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<listOfValues>
+<valueDef value="1" description=""/>
+<valueDef value="2" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="credite" id="3DE45774-171C-D17B-6394-BBE7F63CC9E2">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Daca nu se adauga creditele, se va asuma ca materia are 1 credit]]></commentInRDBMS>
+<generatorID>16C2F4AD-B942-C534-BA0C-CD7BDF8590EC</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<constraintName>Discipline_credite_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>1</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>1</beginValue>
+<endValue>7</endValue>
+<description>Nr de credite e limitat la 7 pt a lasa credite altor materii</description>
+</rangeDef>
+</listOfRanges>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="29C5EDB5-45AF-D190-9CE8-433E01B71FCC" name="Discipline_PK">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<generatorID>0DE73F0D-BBCC-2E85-3CAC-AF107A87B3E4</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="99B7A7EE-0739-60D8-0579-77835D674025"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

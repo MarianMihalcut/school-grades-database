@@ -1,0 +1,133 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="ADE815D6-0CA6-23EE-89E1-BBEB9E65F2BB" name="Profesori">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-16 11:19:18 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_profesor" id="77C0AA56-0D89-CDF9-2303-09E71B5835F7">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-16 11:22:45 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nume_prof" id="35D94F75-5634-CA27-950C-FAEFE5E90FED">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-16 11:43:39 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<constraintName>Profesori_nume_prof_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(nume_prof, &apos;^[A-Za-z-]+$&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="prenume_prof" id="1F08C0B4-F9E4-91B6-F6CD-9EC4E2D963AC">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-16 11:44:10 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<constraintName>Profesori_prenume_prof_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(prenume_prof, &apos;^[A-Za-z-]+$&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="titlu_didactic" id="8A68D22B-3444-40A5-0089-A3636A672A09">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-16 11:44:31 UTC</createdTime>
+<commentInRDBMS><![CDATA[Implicit acest atribut va avea 'Asoc.' (Prof. asociat)]]></commentInRDBMS>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<constraintName>Profesori_titlu_didactic_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<listOfValues>
+<valueDef value="Asist." description="asistent universitar"/>
+<valueDef value="Asoc." description="profesor asociat"/>
+<valueDef value="Conf." description="conferentiar"/>
+<valueDef value="Prof." description="profesor univ."/>
+<valueDef value="S.l." description="sef lucrari"/>
+</listOfValues>
+<defaultValue>Asoc.</defaultValue>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="email" id="0BDD72C9-E23F-E22C-EB7D-1DA849F87CEE">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-16 11:47:35 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<constraintName>Profesori_email_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(email,&apos;[a-z0-9._%-]+@academic\.tuiasi\.ro&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="EDD70A18-D9FF-BCC1-2099-E431D7999E4B" name="Profesori_PK">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-16 11:23:06 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>77C0AA56-0D89-CDF9-2303-09E71B5835F7</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="198C0EE9-DBC9-3077-A801-0C2CF0BAA334" name="email_p">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-21 08:44:08 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="false"/>
+</engineerTo>
+<newElementsIDs>0BDD72C9-E23F-E22C-EB7D-1DA849F87CEE</newElementsIDs>
+<usedAttributes>
+<attributeRef>0BDD72C9-E23F-E22C-EB7D-1DA849F87CEE</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,135 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="62CAF3A2-9DAF-3A1B-B171-4D72E7768F41" name="Note">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<comment><![CDATA[Fiind relatie M la N, avem tabela de join intre Studenti si Discipline(care are o referinta catre profesori prin Foreign Key), care colecteaza notele obtinute de studenti la discipline]]></comment>
+<ownerDesignName>database</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_student" id="F5B2623E-3B89-79BA-ED07-9C603BBC9871">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="476FC0E8-D687-D2CC-51C0-9AED09791632" referredColumn="A95E220C-9B52-DF99-B8E4-78D13155355A"/>
+</associations>
+</Column>
+<Column name="id_disciplina" id="D88236FC-6B2E-CD67-70BB-5EB1B718A4EA">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2181A128-327A-8BA9-A1C2-D6B1E88B1798" referredColumn="99B7A7EE-0739-60D8-0579-77835D674025"/>
+</associations>
+</Column>
+<Column name="nota" id="B666DE0A-DBCE-79E4-5F74-525DFB5134A1">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<comment><![CDATA[De la 1 la 10]]></comment>
+<generatorID>81888347-B90E-04BB-2763-BA9FD4D6D3A7</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<constraintName>Note_nota_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>1</beginValue>
+<endValue>10</endValue>
+<description>Notele sunt de la 1 la 10</description>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="tip_nota" id="44C93109-6D58-E73F-550C-D6512E9062DB">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<comment><![CDATA[Examen, laborator sau colocviu]]></comment>
+<generatorID>68908B7B-8EDE-BB7A-D109-6178B6D45AF1</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<constraintName>Note_tip_nota_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<listOfValues>
+<valueDef value="Colocviu" description=""/>
+<valueDef value="Examen" description=""/>
+<valueDef value="Laborator" description=""/>
+</listOfValues>
+<defaultValue>Laborator</defaultValue>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+<Column name="comentarii" id="A67D1FB3-1F1A-7073-4780-DD6B8E20D3A8">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<comment><![CDATA[Optional; doar daca se doreste scrierea de mentiuni se va adauga ceva diferit de NULL]]></comment>
+<generatorID>1D070393-F0F3-E0C6-B6A8-C2AE429B3B4B</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B9EAA783-1610-B4EE-92AD-C9723F046D30" name="Note_PK">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F5B2623E-3B89-79BA-ED07-9C603BBC9871"/>
+<colUsage columnID="D88236FC-6B2E-CD67-70BB-5EB1B718A4EA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="84C8AC89-8000-8997-F63E-2AFB3F483C55" name="Note_Studenti_FK">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<generatorID>D00CD92A-7A40-869C-389E-C773194B04E5</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F5B2623E-3B89-79BA-ED07-9C603BBC9871"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="88B8AA26-CF32-0F04-E92B-7562D3B1A844" name="Note_Discipline_FK">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<generatorID>D00CD92A-7A40-869C-389E-C773194B04E5</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D88236FC-6B2E-CD67-70BB-5EB1B718A4EA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,122 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DB254B63-6A93-21CD-D5D7-C8C5D1AF0896" name="Detalii_student">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:42 UTC</createdTime>
+<generatorID>2A905109-B785-307C-6A02-1F91FFD70331</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_student" id="29907500-7C90-997F-E0CA-7C6B2A7A1639">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<generatorID>9E3482C2-8B33-0755-A5E5-4268A6B9F244</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3BBDB77F-6449-6B7B-118F-BABA682550BB" referredColumn="A95E220C-9B52-DF99-B8E4-78D13155355A"/>
+</associations>
+</Column>
+<Column name="nr_matricol" id="235C93B5-074D-70AB-6081-3CB865CC0ACC">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<generatorID>6C700028-AB14-115F-8CA4-3527CED322FE</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<constraintName>Detalii_student_nr_matricol_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="floor(nr_matricol/100)&gt;0"/>
+</checkConstraint>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="serie_legitimatie" id="B1534B2F-E1EB-5D96-A115-5D2C5C395EF2">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<generatorID>5387F921-4A7E-426F-0DCB-FFC3CAA09C6C</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<constraintName>Detalii_student_serie_leg_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(serie_legitimatie, &apos;[A-Z]&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="numar_legitimatie" id="3BC7E4EA-CAD3-FD30-3555-1472466FBEEB">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<generatorID>E3194423-4D9F-193C-07DD-5B9D02402738</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<constraintName>Detalii_student_numar_leg_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="floor(numar_legitimatie/100000)&gt;0"/>
+</checkConstraint>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A6678938-875E-8471-56BC-681E545D1078" name="Detalii_student_PK">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<generatorID>067C64F2-633B-1CFC-206A-7282196A612C</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="29907500-7C90-997F-E0CA-7C6B2A7A1639"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="40821A1D-CBAA-D4BE-465C-9DB55B174DAF" name="nr_matricol">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<generatorID>608419CE-906B-EDCC-F2BB-1C7CA9829EAA</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="235C93B5-074D-70AB-6081-3CB865CC0ACC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="739DD50D-713F-9B24-A06B-C5AD3FBA2BBB" name="numar_legitimatie">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<generatorID>2DFEF69E-F563-EFBA-71F5-960B50567BB9</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3BC7E4EA-CAD3-FD30-3555-1472466FBEEB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0CCE14A2-0307-F20D-5EAA-7D29C320E1D2" name="Studenti_Detalii_fk">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<generatorID>B3F6ADAC-9388-BC81-92A7-7DF44DCEA4B0</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="29907500-7C90-997F-E0CA-7C6B2A7A1639"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

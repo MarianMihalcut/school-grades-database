@@ -1,0 +1,184 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9238D2EF-9E54-68D5-6004-CFFAD1853A02" name="Studenti">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-16 09:47:17 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_student" id="E0C2E3AE-8151-B4CA-9F2C-5D959264F2D0">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-16 09:47:31 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nume_student" id="C882305B-93EE-C5E5-B2A0-EAC19B2C916D">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-16 09:48:33 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<constraintName>Studenti_nume_student_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(nume_student, &apos;^[A-Za-z-]+$&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="prenume_student" id="0DDD5EE7-C58A-61A9-0659-594ACC2498D1">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-16 09:49:03 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<constraintName>Studenti_prenume_student_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(prenume_student, &apos;^[a-zA-Z-]+$&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CNP" id="6C0FE961-91D4-EEA8-374D-3EA83D7283BD">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-16 10:02:08 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<constraintName>Studenti_CNP_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>13</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(CNP,&apos;^[0-9]+$&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>13,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data_nasterii" id="8C91D546-2990-E774-E903-9C30D9B5F641">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-16 10:22:27 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="email" id="BF902D59-C1A4-F7BF-D071-31CADA809117">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-16 10:25:49 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<constraintName>Studenti_email_ck</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(email,&apos;[a-z0-9._%-]+@[a-z0-9._%-]+\.[a-z]{2,4}&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="telefon" id="37513058-BD1F-6A47-F597-9B85F80D2E99">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-16 10:26:10 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<constraintName>Studenti_telefon_ck</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(telefon, &apos;^[0-9]+$&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="ACE1BE77-C6DF-F429-F4C0-0D3D2FFDEE62" name="Studenti_PK">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-16 09:47:59 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E0C2E3AE-8151-B4CA-9F2C-5D959264F2D0</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="10343707-146A-EFE4-3F11-CBE42FC34126" name="CNP">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-21 08:30:23 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="false"/>
+</engineerTo>
+<newElementsIDs>6C0FE961-91D4-EEA8-374D-3EA83D7283BD</newElementsIDs>
+<usedAttributes>
+<attributeRef>6C0FE961-91D4-EEA8-374D-3EA83D7283BD</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="B6E0CC62-2741-C48A-B2E8-21861AEA6D3B" name="email_s">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-21 08:39:12 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="false"/>
+</engineerTo>
+<newElementsIDs>BF902D59-C1A4-F7BF-D071-31CADA809117</newElementsIDs>
+<usedAttributes>
+<attributeRef>BF902D59-C1A4-F7BF-D071-31CADA809117</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="9B23529B-F6ED-62A5-EF76-3FE98DF7E35D" name="telefon">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-21 08:39:47 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="false"/>
+</engineerTo>
+<newElementsIDs>37513058-BD1F-6A47-F597-9B85F80D2E99</newElementsIDs>
+<usedAttributes>
+<attributeRef>37513058-BD1F-6A47-F597-9B85F80D2E99</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

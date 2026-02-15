@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Studenti_Grupe" directorySegmentName="seg_0" id="03DD642B-63F2-5E2E-A99A-6DE403FDCA6E">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-30 11:36:39 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>9238D2EF-9E54-68D5-6004-CFFAD1853A02</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>EA3AC07C-471A-1A2C-B296-6A52C656FE57</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<attribute name="an_universitar" id="20306181-A52E-6C44-B5C1-5992DC7B0A7D">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-30 11:37:59 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<constraintName>Studenti_Grupe_an_univ_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(an_universitar, &apos;[0-9]{4}-[0-9]{4}&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
+</attribute>
+<attribute name="an_studiu" id="260870B8-FC41-34FA-C5F0-96FD022FD0E3">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-31 10:51:23 UTC</createdTime>
+<comment><![CDATA[Pentru simplitate, cel care introduce datele isi va asuma ca anul de studiu corespunde cu ciclul universitar.]]></comment>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<constraintName>Studenti_Grupe_an_studiu_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>1</beginValue>
+<endValue>4</endValue>
+</rangeDef>
+</listOfRanges>
+</attribute>
+<attribute name="ciclu_universitar" id="D63B7BF8-666C-7E07-1314-243B6D4D25B7">
+<createdBy>Marian</createdBy>
+<createdTime>2025-10-30 18:21:52 UTC</createdTime>
+<comment><![CDATA[Doctoratul e exclus pt simplitate
+Se accepta in acest atribut doar licenta si master
+Implicit se considera ca studentul e la licenta]]></comment>
+<ownerDesignName>database</ownerDesignName>
+<engineerTo>
+<item key="45C19032-9D51-617B-3573-D0FFBF993CB3" value="true"/>
+</engineerTo>
+<constraintName>Studenti_grupe_ciclu_univ_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<listOfValues>
+<valueDef value="licenta" description=""/>
+<valueDef value="master" description=""/>
+</listOfValues>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</attribute>
+</attributes>
+</Relation>

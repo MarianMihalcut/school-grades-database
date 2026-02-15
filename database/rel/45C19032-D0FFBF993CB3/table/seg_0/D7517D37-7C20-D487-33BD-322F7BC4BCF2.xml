@@ -1,0 +1,141 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D7517D37-7C20-D487-33BD-322F7BC4BCF2" name="Studenti_Grupe">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_student" id="D5EDC6E3-5C11-32D8-F781-6B74A76019B6">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="55ADC23E-51CD-692B-43F5-D489E8643FFD" referredColumn="A95E220C-9B52-DF99-B8E4-78D13155355A"/>
+</associations>
+</Column>
+<Column name="id_grupa" id="7BCE4BF3-9101-FC89-B322-3C69B6B17491">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-13 18:48:19 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<constraintName>Stud_Grupe_id_grupa_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="(ciclu_universitar = &apos;licenta&apos; AND SUBSTR(id_grupa, 2, 1) = TO_CHAR(an_studiu)) OR (ciclu_universitar = &apos;master&apos; AND id_grupa LIKE &apos;%-I-%&apos; AND an_studiu = 1) OR (ciclu_universitar = &apos;master&apos; AND id_grupa LIKE &apos;%-II-%&apos; AND an_studiu = 2)"/>
+</checkConstraint>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B646947B-120B-080D-DB50-E2CD2BFE5E04" referredColumn="0998B81A-B4DC-8548-888A-955AC96FD821"/>
+</associations>
+</Column>
+<Column name="an_universitar" id="A3001C67-F975-6867-8364-20F90ED53D61">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<generatorID>20306181-A52E-6C44-B5C1-5992DC7B0A7D</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<constraintName>Studenti_Grupe_an_univ_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(an_universitar, &apos;[0-9]{4}-[0-9]{4}&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+<Column name="an_studiu" id="A01B64B7-1DC5-F526-48E6-E6828AD769BE">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<comment><![CDATA[Pentru simplitate, cel care introduce datele isi va asuma ca anul de studiu corespunde cu ciclul universitar.]]></comment>
+<generatorID>260870B8-FC41-34FA-C5F0-96FD022FD0E3</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<constraintName>Studenti_Grupe_an_studiu_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>1</beginValue>
+<endValue>4</endValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="ciclu_universitar" id="5122E84C-3A9B-0EC5-4529-A80308CBC892">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<comment><![CDATA[Doctoratul e exclus pt simplitate
+Se accepta in acest atribut doar licenta si master
+Implicit se considera ca studentul e la licenta]]></comment>
+<generatorID>D63B7BF8-666C-7E07-1314-243B6D4D25B7</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<constraintName>Studenti_grupe_ciclu_univ_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<listOfValues>
+<valueDef value="licenta" description=""/>
+<valueDef value="master" description=""/>
+</listOfValues>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4CB091DC-FBCA-5767-7C93-A1142E69C2E5" name="Studenti_Grupe_PK">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<ownerDesignName>database</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D5EDC6E3-5C11-32D8-F781-6B74A76019B6"/>
+<colUsage columnID="7BCE4BF3-9101-FC89-B322-3C69B6B17491"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B40D28C7-F7AE-C98C-FB76-BB279FFB4105" name="Studenti_Grupe_Studenti_FK">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<generatorID>03DD642B-63F2-5E2E-A99A-6DE403FDCA6E</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D5EDC6E3-5C11-32D8-F781-6B74A76019B6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E471448A-56E6-5F0D-80F8-4F154BC73799" name="Studenti_Grupe_Grupe_FK">
+<createdBy>Marian</createdBy>
+<createdTime>2025-11-03 11:24:43 UTC</createdTime>
+<generatorID>03DD642B-63F2-5E2E-A99A-6DE403FDCA6E</generatorID>
+<ownerDesignName>database</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7BCE4BF3-9101-FC89-B322-3C69B6B17491"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
